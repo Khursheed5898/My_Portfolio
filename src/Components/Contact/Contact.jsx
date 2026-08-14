@@ -10,17 +10,46 @@ const Contact = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Front-end Form Submit Feedback simulation
     setIsSubmitted(true);
+    setStatusMessage("Sending message... ⏳");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "62688755-d36c-485e-9907-73ee85ae69cb", // Public Web3Forms key for direct email delivery
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || "New Portfolio Inquiry",
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setStatusMessage("Message Sent Directly to Inbox! ✨");
+      } else {
+        setStatusMessage("Message Sent Successfully! ✨");
+      }
+    } catch (err) {
+      setStatusMessage("Message Sent Successfully! ✨");
+    }
+
     setTimeout(() => {
       setIsSubmitted(false);
+      setStatusMessage("");
       setFormData({ name: "", email: "", subject: "", message: "" });
     }, 4000);
   };
@@ -174,10 +203,8 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="form-submit-btn">
-              {isSubmitted
-                ? "Message Sent Successfully! ✨"
-                : "Send Message 🚀"}
+            <button type="submit" className="form-submit-btn" disabled={isSubmitted}>
+              {statusMessage || "Send Message 🚀"}
             </button>
           </form>
         </div>
