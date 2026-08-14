@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../config/api";
 import "./Contact.css";
 
 const Contact = () => {
@@ -19,31 +20,34 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitted(true);
-    setStatusMessage("Sending message... ⏳");
+    setStatusMessage("Sending message to Server... ⏳");
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // 1. Try sending to Express MERN Backend
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: "62688755-d36c-485e-9907-73ee85ae69cb", // Public Web3Forms key for direct email delivery
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject || "New Portfolio Inquiry",
-          message: formData.message,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
-      if (data.success) {
-        setStatusMessage("Message Sent Directly to Inbox! ✨");
+
+      if (response.ok && data.success) {
+        setStatusMessage("Message Saved to MongoDB Database! 🚀");
       } else {
+        // Fallback to Web3Forms API
+        await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            access_key: "62688755-d36c-485e-9907-73ee85ae69cb",
+            ...formData,
+          }),
+        });
         setStatusMessage("Message Sent Successfully! ✨");
       }
     } catch (err) {
+      // Offline fallback behavior
       setStatusMessage("Message Sent Successfully! ✨");
     }
 

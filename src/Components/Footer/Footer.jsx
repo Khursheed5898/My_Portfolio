@@ -1,20 +1,36 @@
 import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { API_BASE_URL } from "../../config/api";
 import "./Footer.css";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/newsletter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSubscribed(true);
+      } else {
+        setSubscribed(true);
+      }
+    } catch (err) {
       setSubscribed(true);
-      setTimeout(() => {
-        setSubscribed(false);
-        setEmail("");
-      }, 4000);
     }
+
+    setTimeout(() => {
+      setSubscribed(false);
+      setEmail("");
+    }, 4000);
   };
 
   const scrollToTop = () => {

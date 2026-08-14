@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../../config/api";
 import "./MyWork.css";
 
 // 🎯 Practical Machine Learning & Full-Stack Projects Data
-const projectsData = [
+const initialProjectsData = [
   {
     w_no: 1,
     w_name: "Customer Churn Risk Predictor & EDA",
@@ -85,11 +86,36 @@ const getCategoryClass = (category) => {
 
 const MyWork = () => {
   const [activeTab, setActiveTab] = useState("All");
+  const [projectsList, setProjectsList] = useState(initialProjectsData);
+
+  useEffect(() => {
+    fetch(`${API_BASE_URL}/api/projects`)
+      .then((res) => res.json())
+      .then((resData) => {
+        if (resData.success && resData.data && resData.data.length > 0) {
+          // Normalize API fields to match component schema if fetched from DB
+          const formatted = resData.data.map((item, idx) => ({
+            w_no: item._id || idx + 1,
+            w_name: item.title || item.w_name,
+            w_category: item.category || item.w_category,
+            w_desc: item.desc || item.w_desc,
+            w_tech: item.tech || item.w_tech || [],
+            w_img: item.badge || item.w_img || "🚀",
+            live_link: item.live || item.live_link || "#",
+            github_link: item.github || item.github_link || "#",
+          }));
+          setProjectsList(formatted);
+        }
+      })
+      .catch(() => {
+        // Fallback to local array if server isn't running
+      });
+  }, []);
 
   const filteredProjects =
     activeTab === "All"
-      ? projectsData
-      : projectsData.filter((p) => p.w_category === activeTab);
+      ? projectsList
+      : projectsList.filter((p) => p.w_category === activeTab);
 
   const handleMouseMove = (e) => {
     const card = e.currentTarget;
