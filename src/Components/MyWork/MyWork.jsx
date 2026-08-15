@@ -2,7 +2,23 @@ import React, { useState, useEffect } from "react";
 import { API_BASE_URL } from "../../config/api";
 import "./MyWork.css";
 
-// 🎯 Practical Machine Learning & Full-Stack Projects Data
+// 🎯 Helper function to map API/DB categories to active Filter Tabs
+const normalizeCategory = (cat) => {
+  if (!cat) return "Web Dev (MERN)";
+  const lower = cat.toLowerCase();
+  if (lower.includes("machine") || lower.includes("ml") || lower.includes("ai")) {
+    return "Machine Learning";
+  }
+  if (lower.includes("data") || lower.includes("analytics") || lower.includes("science")) {
+    return "Data Analytics";
+  }
+  if (lower.includes("embedded") || lower.includes("robotics") || lower.includes("ros")) {
+    return "Embedded & Robotics";
+  }
+  return "Web Dev (MERN)";
+};
+
+// 🎯 Practical Machine Learning, Data Analytics & Full-Stack Projects Data
 const initialProjectsData = [
   {
     w_no: 1,
@@ -28,6 +44,28 @@ const initialProjectsData = [
   },
   {
     w_no: 3,
+    w_name: "Customer Behavioral Segmentation & RFM Analytics",
+    w_category: "Data Analytics",
+    w_desc:
+      "Core Data Analytics pipeline featuring SQL data wrangling, RFM cohort analysis, and unsupervised K-Means ML clustering to identify high-value vs churn-risk customers.",
+    w_tech: ["Python", "SQL", "Pandas", "Seaborn", "Scikit-Learn (K-Means)", "Plotly"],
+    w_img: "📊",
+    live_link: "#",
+    github_link: "https://github.com/khursheed5898/customer-segmentation-analytics",
+  },
+  {
+    w_no: 4,
+    w_name: "Financial Data Analytics & Predictive Stock Trends",
+    w_category: "Data Analytics",
+    w_desc:
+      "Interactive financial analytics dashboard performing exploratory data analysis, moving average trendlines, and XGBoost ML regression for market volatility prediction.",
+    w_tech: ["Python", "Pandas", "NumPy", "Scikit-Learn", "Streamlit", "Matplotlib"],
+    w_img: "📈",
+    live_link: "#",
+    github_link: "https://github.com/khursheed5898/financial-trend-analytics",
+  },
+  {
+    w_no: 5,
     w_name: "DiBot.Ai — Transparent AI Debate Partner",
     w_category: "Web Dev (MERN)",
     w_desc:
@@ -38,7 +76,7 @@ const initialProjectsData = [
     github_link: "https://github.com/khursheed5898/dibot-ai",
   },
   {
-    w_no: 4,
+    w_no: 6,
     w_name: "Full-Stack MERN Portfolio & Avid (AI Co-Pilot)",
     w_category: "Web Dev (MERN)",
     w_desc:
@@ -49,7 +87,18 @@ const initialProjectsData = [
     github_link: "https://github.com/khursheed5898/MyPortfolio",
   },
   {
-    w_no: 5,
+    w_no: 7,
+    w_name: "E-Commerce CyberStore Platform",
+    w_category: "Web Dev (MERN)",
+    w_desc:
+      "Full-stack MERN e-commerce platform with Stripe payment gateway integration, JWT authentication, Redux toolkit state, and admin management dashboard.",
+    w_tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe API"],
+    w_img: "🛒",
+    live_link: "#",
+    github_link: "https://github.com/khursheed5898/cyberstore-mern",
+  },
+  {
+    w_no: 8,
     w_name: "Laser-Based Vertical Height Measuring Robot",
     w_category: "Embedded & Robotics",
     w_desc:
@@ -58,7 +107,18 @@ const initialProjectsData = [
     w_img: "🤖",
     live_link: "#",
     github_link: "https://github.com/khursheed5898/laser-height-robot",
-  }
+  },
+  {
+    w_no: 9,
+    w_name: "Deep Vision Autonomous Mapping Rover",
+    w_category: "Embedded & Robotics",
+    w_desc:
+      "Computer-vision powered obstacle detection & spatial mapping using ROS2, YOLOv8 object detection, and LiDAR sensor integration.",
+    w_tech: ["ROS2", "YOLOv8", "Python", "C++", "OpenCV", "LiDAR"],
+    w_img: "🛰️",
+    live_link: "#",
+    github_link: "https://github.com/khursheed5898/autonomous-mapping-rover",
+  },
 ];
 
 const categories = [
@@ -93,22 +153,27 @@ const MyWork = () => {
       .then((res) => res.json())
       .then((resData) => {
         if (resData.success && resData.data && resData.data.length > 0) {
-          // Normalize API fields to match component schema if fetched from DB
+          // Map API items while preserving initial projects fallback
           const formatted = resData.data.map((item, idx) => ({
             w_no: item._id || idx + 1,
             w_name: item.title || item.w_name,
-            w_category: item.category || item.w_category,
+            w_category: normalizeCategory(item.category || item.w_category),
             w_desc: item.desc || item.w_desc,
             w_tech: item.tech || item.w_tech || [],
             w_img: item.badge || item.w_img || "🚀",
             live_link: item.live || item.live_link || "#",
             github_link: item.github || item.github_link || "#",
           }));
-          setProjectsList(formatted);
+
+          // Merge DB items with initial static list uniquely by project name
+          const mergedNames = new Set(formatted.map((p) => p.w_name));
+          const restStatic = initialProjectsData.filter((p) => !mergedNames.has(p.w_name));
+          setProjectsList([...formatted, ...restStatic]);
         }
       })
       .catch(() => {
-        // Fallback to local array if server isn't running
+        // Fallback to full local array if server isn't active
+        setProjectsList(initialProjectsData);
       });
   }, []);
 
@@ -221,3 +286,4 @@ const MyWork = () => {
 };
 
 export default MyWork;
+
