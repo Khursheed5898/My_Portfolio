@@ -131,7 +131,7 @@
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  padding: 35px 28px;
+  padding: 26px 24px;
   overflow: hidden;
   cursor: pointer;
 
@@ -177,7 +177,7 @@
 .work-content {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 13px;
   transform: translateZ(30px);
 }
 
