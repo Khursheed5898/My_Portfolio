@@ -291,14 +291,21 @@
   color: #e2e8f0;
 }
 
-/* Mobile Responsiveness */
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .vision {
+    padding: 80px 6%;
+  }
+}
+
 @media (max-width: 900px) {
   .vision {
     padding: 60px 5%;
+    gap: 35px;
   }
 
   .vision-title h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .vision-container {
@@ -309,5 +316,30 @@
   .vision-card {
     padding: 28px 22px;
     transform: none !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .vision-title h1 {
+    font-size: 28px;
+  }
+
+  .vision-card-title {
+    font-size: 20px;
+  }
+
+  .vision-card-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .vision {
+    padding: 45px 3%;
+  }
+
+  .vision-card {
+    padding: 22px 16px;
   }
 }

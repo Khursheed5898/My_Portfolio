@@ -416,6 +416,17 @@
 }
 
 /* 📱 Responsive Mobile & Tablet Adjustments */
+@media (max-width: 1024px) {
+  .services {
+    padding: 80px 6%;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 25px;
+  }
+}
+
 @media (max-width: 950px) {
   .domain-tabs {
     display: grid;
@@ -435,14 +446,54 @@
 @media (max-width: 768px) {
   .services {
     padding: 60px 5%;
+    gap: 35px;
   }
 
   .services-title h1 {
-    font-size: 36px;
+    font-size: 34px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
   }
 
   .services-card {
-    padding: 30px 20px;
+    padding: 30px 22px;
     transform: none !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .domain-tabs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .domain-tab-btn {
+    flex: 1 1 calc(50% - 6px);
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .services-title h1 {
+    font-size: 28px;
+  }
+
+  .domain-banner h2 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 360px) {
+  .services {
+    padding: 45px 3%;
+  }
+
+  .domain-tab-btn {
+    flex: 1 1 100%;
+  }
+
+  .services-card {
+    padding: 24px 16px;
   }
 }

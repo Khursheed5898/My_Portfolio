@@ -314,16 +314,38 @@
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
+  .avid-overlay {
+    padding: 10px;
+  }
+
   .avid-modal {
-    height: 90vh;
-    border-radius: 16px;
+    height: 92vh;
+    border-radius: 18px;
   }
 
   .avid-header {
-    padding: 14px 16px;
+    padding: 12px 16px;
   }
 
   .avid-status-info h3 {
     font-size: 15px;
+  }
+
+  .chat-bubble {
+    max-width: 92%;
+  }
+
+  .bubble-content {
+    padding: 10px 14px;
+    font-size: 13.5px;
+  }
+
+  .avid-input-form {
+    padding: 10px 12px;
+  }
+
+  .avid-send-btn {
+    padding: 10px 16px;
+    font-size: 12px;
   }
 }

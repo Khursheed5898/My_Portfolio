@@ -209,20 +209,60 @@
   color: var(--text-muted);
 }
 
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .datalab {
+    padding: 70px 6%;
+  }
+
+  .datalab-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .datalab {
     padding: 60px 5%;
+    gap: 30px;
   }
 
   .datalab-title h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .datalab-grid {
     grid-template-columns: 1fr;
   }
 
+  .datalab-card {
+    padding: 28px 22px;
+  }
+
   .input-group {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .datalab-title h1 {
+    font-size: 28px;
+  }
+
+  .nlp-btn {
+    width: 100%;
+  }
+
+  .card-header h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .datalab {
+    padding: 45px 3%;
+  }
+
+  .datalab-card {
+    padding: 22px 16px;
   }
 }
