@@ -47,7 +47,9 @@ const Footer = () => {
             Khursheed Alam<span className="logo-dot">.</span>
           </h2>
           <p>
-            CS (AI) Engineer & Multi-Disciplinary Developer operating across Machine Learning, Data Analytics, Robotics, and Full-Stack Web Development.
+            CS (AI) Engineer & Multi-Disciplinary Developer operating across
+            Machine Learning, Data Analytics, Robotics, and Full-Stack Web
+            Development.
           </p>
         </div>
 
@@ -73,7 +75,8 @@ const Footer = () => {
       {/* Bottom Row: Copyright & Legal */}
       <div className="footer-bottom">
         <p className="footer-copyright">
-          © {new Date().getFullYear()} Khursheed Alam. All rights reserved. Built with React & 3D Glass UI.
+          © {new Date().getFullYear()} Khursheed Alam. All rights reserved.
+          Built with React & 3D Glass UI.
         </p>
 
         <div className="footer-links">
@@ -89,7 +92,11 @@ const Footer = () => {
         </div>
 
         {/* Scroll To Top Floating Button */}
-        <button className="scroll-top-btn" onClick={scrollToTop} aria-label="Scroll to top">
+        <button
+          className="scroll-top-btn"
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
           ↑
         </button>
       </div>

@@ -18,7 +18,7 @@ const About = () => {
             I am a CS (AI) Engineer & Multi-Disciplinary Developer actively operating across <strong style={{ color: "#fff" }}>Machine Learning, Data Analytics, Robotics, and Web Dev</strong>.
           </p>
           <p className="bio-text">
-            My engineering journey combines production MERN web applications with intelligent AI pipelines, data-driven BI insights, and low-level embedded hardware. I focus on writing modular clean code and building scalable systems.
+            My engineering journey bridges high-level full-stack MERN software architectures with intelligent AI models, complex data analytics pipelines, and low-level embedded hardware systems. I focus on writing clean, modular code, optimizing algorithmic efficiency, and engineering scalable real-world systems.
           </p>
           <div className="bio-tags">
             <span className="bio-tag tag-ml">🤖 ML & Computer Vision</span>

@@ -38,15 +38,17 @@ const Hero = () => {
 
         {/* Right Column: Title, Subtitle & Action Buttons */}
         <div className="hero-right">
-          {/* Hero Headline */}
+          {/* Hero Headline (Structured in 3 Clean Lines) */}
           <h1 className="hero-title">
-            Engineering <span className="hero-gradient-text">AI Systems</span>,
-            MERN
-            <br />
-            <span className="hero-highlight" style={{ whiteSpace: "nowrap" }}>
-              Web Apps
-            </span>{" "}
-            & Quantum Futures.
+            <span className="hero-title-line">
+              Engineering <span className="hero-gradient-text">AI Systems</span>,
+            </span>
+            <span className="hero-title-line hero-highlight">
+              MERN Web Dev,
+            </span>
+            <span className="hero-title-line">
+              Quantum Computing & AI.
+            </span>
           </h1>
 
           {/* Subtitle */}
