@@ -28,8 +28,8 @@ const initialProjectsData = [
       "Exploratory Data Analysis (EDA) & classification ML pipeline predicting customer retention risk using Scikit-Learn models, feature scaling, and correlation heatmaps.",
     w_tech: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Seaborn", "Matplotlib"],
     w_img: "📊",
-    live_link: "https://github.com/khursheed5898/customer-churn-ml",
-    github_link: "https://github.com/khursheed5898/customer-churn-ml",
+    live_link: "https://github.com/Khursheed5898",
+    github_link: "https://github.com/Khursheed5898",
   },
   {
     w_no: 2,
@@ -39,8 +39,8 @@ const initialProjectsData = [
       "Supervised ML regression algorithm predicting property market prices based on square footage, location features, and historical dataset analytics.",
     w_tech: ["Python", "Scikit-Learn", "Pandas", "Linear Regression", "Matplotlib"],
     w_img: "🏡",
-    live_link: "https://github.com/khursheed5898/house-price-estimator",
-    github_link: "https://github.com/khursheed5898/house-price-estimator",
+    live_link: "https://github.com/Khursheed5898",
+    github_link: "https://github.com/Khursheed5898",
   },
   {
     w_no: 3,
@@ -50,8 +50,8 @@ const initialProjectsData = [
       "Core Data Analytics pipeline featuring SQL data wrangling, RFM cohort analysis, and unsupervised K-Means ML clustering to identify high-value vs churn-risk customers.",
     w_tech: ["Python", "SQL", "Pandas", "Seaborn", "Scikit-Learn (K-Means)", "Plotly"],
     w_img: "📊",
-    live_link: "https://github.com/khursheed5898/customer-segmentation-analytics",
-    github_link: "https://github.com/khursheed5898/customer-segmentation-analytics",
+    live_link: "https://github.com/Khursheed5898",
+    github_link: "https://github.com/Khursheed5898",
   },
   {
     w_no: 4,
@@ -61,8 +61,8 @@ const initialProjectsData = [
       "Interactive financial analytics dashboard performing exploratory data analysis, moving average trendlines, and XGBoost ML regression for market volatility prediction.",
     w_tech: ["Python", "Pandas", "NumPy", "Scikit-Learn", "Streamlit", "Matplotlib"],
     w_img: "📈",
-    live_link: "https://github.com/khursheed5898/financial-trend-analytics",
-    github_link: "https://github.com/khursheed5898/financial-trend-analytics",
+    live_link: "https://github.com/Khursheed5898",
+    github_link: "https://github.com/Khursheed5898",
   },
   {
     w_no: 5,
@@ -72,8 +72,8 @@ const initialProjectsData = [
       "Full-stack AI education platform featuring transparent AI reasoning, structured debate rounds, Gemini API integration, and real-time Socket.io metrics.",
     w_tech: ["React 19", "Node.js", "Express", "Google Gemini API", "Socket.io", "MongoDB"],
     w_img: "🗣️",
-    live_link: "https://dibot-ai.render.com",
-    github_link: "https://github.com/khursheed5898/dibot-ai",
+    live_link: "https://dibotai.duckdns.org/",
+    github_link: "https://github.com/Khursheed5898/dibot-ai",
   },
   {
     w_no: 6,
@@ -84,7 +84,7 @@ const initialProjectsData = [
     w_tech: ["React.js", "Node.js", "Express", "MongoDB Atlas", "Groq API", "Vercel"],
     w_img: "💻",
     live_link: "https://khursheed-portfolio.vercel.app",
-    github_link: "https://github.com/khursheed5898/MyPortfolio",
+    github_link: "https://github.com/Khursheed5898/MyPortfolio",
   },
   {
     w_no: 7,
@@ -94,8 +94,8 @@ const initialProjectsData = [
       "Full-stack MERN e-commerce platform with Stripe payment gateway integration, JWT authentication, Redux toolkit state, and admin management dashboard.",
     w_tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe API"],
     w_img: "🛒",
-    live_link: "https://github.com/khursheed5898/cyberstore-mern",
-    github_link: "https://github.com/khursheed5898/cyberstore-mern",
+    live_link: "https://github.com/Khursheed5898",
+    github_link: "https://github.com/Khursheed5898",
   },
   {
     w_no: 8,
@@ -105,8 +105,8 @@ const initialProjectsData = [
       "Non-contact hardware measurement robot prototype capable of calculating object vertical height using laser sensing and control logic programmed in Java.",
     w_tech: ["Arduino IDE", "Java", "Mechatronics", "Hardware Laser Sensors", "Robotics"],
     w_img: "🤖",
-    live_link: "https://github.com/khursheed5898/laser-height-robot",
-    github_link: "https://github.com/khursheed5898/laser-height-robot",
+    live_link: "https://github.com/Khursheed5898",
+    github_link: "https://github.com/Khursheed5898",
   },
   {
     w_no: 9,
@@ -116,8 +116,8 @@ const initialProjectsData = [
       "Computer-vision powered obstacle detection & spatial mapping using ROS2, YOLOv8 object detection, and LiDAR sensor integration.",
     w_tech: ["ROS2", "YOLOv8", "Python", "C++", "OpenCV", "LiDAR"],
     w_img: "🛰️",
-    live_link: "https://github.com/khursheed5898/autonomous-mapping-rover",
-    github_link: "https://github.com/khursheed5898/autonomous-mapping-rover",
+    live_link: "https://github.com/Khursheed5898",
+    github_link: "https://github.com/Khursheed5898",
   },
 ];
 
