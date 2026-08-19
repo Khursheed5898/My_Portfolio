@@ -222,6 +222,12 @@
   margin-top: 10px;
 }
 
+.stat-card-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
 .stat-card {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
@@ -233,12 +239,13 @@
   flex-direction: column;
   gap: 8px;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .stat-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(218, 124, 37, 0.5);
-  box-shadow: 0 15px 30px rgba(218, 124, 37, 0.15);
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(218, 124, 37, 0.6);
+  box-shadow: 0 15px 35px rgba(218, 124, 37, 0.25);
 }
 
 .stat-card h2 {
@@ -265,6 +272,38 @@
 
   .about-title {
     font-size: 42px;
+  }
+
+  /* 1. Skill progress bars (bagal wala content) moved below the card */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* 2. About Me card height reduced & compact padding */
+  .about-bio-card {
+    padding: 26px 28px;
+    gap: 14px;
+  }
+
+  .bio-lead {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .bio-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .bio-tags {
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .bio-tag {
+    padding: 8px 6px;
+    font-size: 12px;
   }
 }
 

@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { API_BASE_URL } from "../../config/api";
 import "./About.css";
 
 const About = () => {
+  const [projectCount, setProjectCount] = useState(15);
+
+  useEffect(() => {
+    const fetchProjectCount = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/projects`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.projects && data.projects.length > 0) {
+            setProjectCount(Math.max(15, data.projects.length));
+          }
+        }
+      } catch (err) {
+        // Fallback to default
+      }
+    };
+    fetchProjectCount();
+  }, []);
+
   return (
     <section id="about" className="about">
       {/* Section Header */}
@@ -64,20 +85,28 @@ const About = () => {
         </div>
       </div>
 
-      {/* 3D Glass Stats Grid */}
+      {/* 3D Glass Interactive Stats Grid */}
       <div className="about-stats-grid">
-        <div className="stat-card">
-          <h2>4+</h2>
-          <p>Technical Domains</p>
-        </div>
-        <div className="stat-card">
-          <h2>15+</h2>
-          <p>Projects Built</p>
-        </div>
-        <div className="stat-card">
-          <h2>2040</h2>
-          <p>Vision Roadmap</p>
-        </div>
+        <AnchorLink href="#services" className="stat-card-link">
+          <div className="stat-card">
+            <h2>4+</h2>
+            <p>Technical Domains</p>
+          </div>
+        </AnchorLink>
+
+        <AnchorLink href="#projects" className="stat-card-link">
+          <div className="stat-card">
+            <h2>{projectCount}+</h2>
+            <p>Projects Built</p>
+          </div>
+        </AnchorLink>
+
+        <AnchorLink href="#vision" className="stat-card-link">
+          <div className="stat-card">
+            <h2>2030</h2>
+            <p>Vision Roadmap</p>
+          </div>
+        </AnchorLink>
       </div>
     </section>
   );

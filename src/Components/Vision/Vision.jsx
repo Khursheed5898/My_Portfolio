@@ -26,10 +26,10 @@ const visionPillars = [
     id: 3,
     icon: "🤖",
     title: "Engineering & Quantum AI",
-    timeline: "Target Vision 2040",
+    timeline: "Target Vision 2030",
     pillarClass: "pillar-engineering",
     tagline: "AI Systems, Robotics & Quantum Computing Era",
-    desc: "Expanding CS (AI) engineering into physical robotics, autonomous hardware systems, and future Quantum AI architectures over the next two decades.",
+    desc: "Expanding CS (AI) engineering into physical robotics, autonomous hardware systems, and future Quantum AI architectures over the next decade.",
     tags: ["CS (AI)", "Robotics", "Quantum AI", "Autonomous Tech"]
   },
   {
@@ -74,7 +74,7 @@ const Vision = () => {
       {/* Title Header */}
       <div className="vision-title">
         <span className="vision-badge">MASTER BLUEPRINT</span>
-        <h1>My Vision (2025 - 2040)</h1>
+        <h1>My Vision (2025 - 2030)</h1>
         <p className="vision-subtitle">
           The 4 Pillars driving my evolution across Life, Science, Engineering & Tech
         </p>

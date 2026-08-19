@@ -162,6 +162,9 @@
   padding: 40px 30px;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   /* 3D Physics Properties */
   transform-style: preserve-3d;
@@ -206,6 +209,8 @@
   flex-direction: column;
   gap: 20px;
   transform: translateZ(30px); /* Pushes text forward in 3D Z-axis */
+  flex: 1;
+  justify-content: space-between;
 }
 
 .card-no {
@@ -227,6 +232,7 @@
   color: var(--text-muted);
   line-height: 1.7;
   font-family: var(--font-body);
+  flex: 1;
 }
 
 /* Interactive CTA Link */

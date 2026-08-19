@@ -8,7 +8,7 @@ const knowledgeBase = {
   domains:
     "Khursheed operates across 4 core engineering domains:\n1. 🤖 Machine Learning & AI (PyTorch, TensorFlow, OpenCV)\n2. 📊 Data Analytics & BI (SQL, Pandas, PowerBI)\n3. 🔌 Embedded Systems & Robotics (C/C++, ESP32, Arduino, IoT)\n4. 💻 Full-Stack Web Dev (MERN, React, Node, 3D Glass UI)",
   vision:
-    "His 2025–2040 Master Blueprint spans 4 Pillars:\n• 🧬 Life & Mentorship (Teaching & Content Creation)\n• 🔬 Science & Exploration (Physics & Applied Math)\n• 🤖 Engineering & Quantum AI (Robotics & Quantum Era 2040)\n• 💻 Tech & Production (Scalable MERN Platforms)",
+    "His 2025–2030 Master Blueprint spans 4 Pillars:\n• 🧬 Life & Mentorship (Teaching & Content Creation)\n• 🔬 Science & Exploration (Physics & Applied Math)\n• 🤖 Engineering & Quantum AI (Robotics & Quantum Era 2030)\n• 💻 Tech & Production (Scalable MERN Platforms)",
   contact:
     "You can reach out to Khursheed via the Contact Form on this site, or connect directly through LinkedIn, GitHub, Twitter/X, and Instagram!",
   health:
@@ -19,7 +19,7 @@ const AvidModal = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([
     {
       sender: "avid",
-      text: "Greetings! I am AVID, Khursheed's AI Portfolio Assistant. How may I assist you today? Feel free to ask about his background, technical domains, or 2040 vision.",
+      text: "Greetings! I am AVID, Khursheed's AI Portfolio Assistant. How may I assist you today? Feel free to ask about his background, technical domains, or 2030 vision.",
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }
   ]);
@@ -67,7 +67,7 @@ const AvidModal = ({ isOpen, onClose }) => {
         const lower = userText.toLowerCase();
         if (lower.includes("domain") || lower.includes("skill") || lower.includes("tech")) {
           replyText = knowledgeBase.domains;
-        } else if (lower.includes("vision") || lower.includes("future") || lower.includes("2040")) {
+        } else if (lower.includes("vision") || lower.includes("future") || lower.includes("2030")) {
           replyText = knowledgeBase.vision;
         } else if (lower.includes("contact") || lower.includes("hire") || lower.includes("email") || lower.includes("reach")) {
           replyText = knowledgeBase.contact;
@@ -164,8 +164,8 @@ const AvidModal = ({ isOpen, onClose }) => {
           <button onClick={() => handleQuickQuestion("domains", "What are his 4 Tech Domains?")}>
             🛠️ 4 Technical Domains
           </button>
-          <button onClick={() => handleQuickQuestion("vision", "Tell me about his 2040 Vision.")}>
-            🔮 2040 Vision Blueprint
+          <button onClick={() => handleQuickQuestion("vision", "Tell me about his 2030 Vision.")}>
+            🔮 2030 Vision Blueprint
           </button>
           <button onClick={() => handleQuickQuestion("health", "Check Site Diagnostics & Errors")}>
             ⚡ System Health Check

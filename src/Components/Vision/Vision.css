@@ -79,6 +79,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)) scale3d(1, 1, 1);
@@ -112,6 +113,8 @@
   flex-direction: column;
   gap: 16px;
   transform: translateZ(30px);
+  flex: 1;
+  justify-content: space-between;
 }
 
 .vision-card-header {
@@ -153,6 +156,7 @@
   color: var(--text-muted);
   line-height: 1.7;
   font-family: var(--font-body);
+  flex: 1;
 }
 
 /* Hashtags Bar */
