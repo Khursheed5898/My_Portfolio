@@ -106,7 +106,7 @@ const Contact = () => {
           {/* Social Links Bar */}
           <div className="social-links">
             <a
-              href="https://github.com"
+              href="https://github.com/dashboard"
               target="_blank"
               rel="noreferrer"
               className="social-tile github"

@@ -6,13 +6,25 @@ import "./MyWork.css";
 const normalizeCategory = (cat) => {
   if (!cat) return "Web Dev (MERN)";
   const lower = cat.toLowerCase();
-  if (lower.includes("machine") || lower.includes("ml") || lower.includes("ai")) {
+  if (
+    lower.includes("machine") ||
+    lower.includes("ml") ||
+    lower.includes("ai")
+  ) {
     return "Machine Learning";
   }
-  if (lower.includes("data") || lower.includes("analytics") || lower.includes("science")) {
+  if (
+    lower.includes("data") ||
+    lower.includes("analytics") ||
+    lower.includes("science")
+  ) {
     return "Data Analytics";
   }
-  if (lower.includes("embedded") || lower.includes("robotics") || lower.includes("ros")) {
+  if (
+    lower.includes("embedded") ||
+    lower.includes("robotics") ||
+    lower.includes("ros")
+  ) {
     return "Embedded & Robotics";
   }
   return "Web Dev (MERN)";
@@ -26,10 +38,17 @@ const initialProjectsData = [
     w_category: "Machine Learning",
     w_desc:
       "Exploratory Data Analysis (EDA) & classification ML pipeline predicting customer retention risk using Scikit-Learn models, feature scaling, and correlation heatmaps.",
-    w_tech: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Seaborn", "Matplotlib"],
+    w_tech: [
+      "Python",
+      "Scikit-Learn",
+      "Pandas",
+      "NumPy",
+      "Seaborn",
+      "Matplotlib",
+    ],
     w_img: "📊",
-    live_link: "https://github.com/Khursheed5898",
-    github_link: "https://github.com/Khursheed5898",
+    live_link: "https://github.com/dashboard",
+    github_link: "https://github.com/dashboard",
   },
   {
     w_no: 2,
@@ -37,10 +56,16 @@ const initialProjectsData = [
     w_category: "Machine Learning",
     w_desc:
       "Supervised ML regression algorithm predicting property market prices based on square footage, location features, and historical dataset analytics.",
-    w_tech: ["Python", "Scikit-Learn", "Pandas", "Linear Regression", "Matplotlib"],
+    w_tech: [
+      "Python",
+      "Scikit-Learn",
+      "Pandas",
+      "Linear Regression",
+      "Matplotlib",
+    ],
     w_img: "🏡",
-    live_link: "https://github.com/Khursheed5898",
-    github_link: "https://github.com/Khursheed5898",
+    live_link: "https://github.com/dashboard",
+    github_link: "https://github.com/dashboard",
   },
   {
     w_no: 3,
@@ -48,10 +73,17 @@ const initialProjectsData = [
     w_category: "Data Analytics",
     w_desc:
       "Core Data Analytics pipeline featuring SQL data wrangling, RFM cohort analysis, and unsupervised K-Means ML clustering to identify high-value vs churn-risk customers.",
-    w_tech: ["Python", "SQL", "Pandas", "Seaborn", "Scikit-Learn (K-Means)", "Plotly"],
+    w_tech: [
+      "Python",
+      "SQL",
+      "Pandas",
+      "Seaborn",
+      "Scikit-Learn (K-Means)",
+      "Plotly",
+    ],
     w_img: "📊",
-    live_link: "https://github.com/Khursheed5898",
-    github_link: "https://github.com/Khursheed5898",
+    live_link: "https://github.com/dashboard",
+    github_link: "https://github.com/dashboard",
   },
   {
     w_no: 4,
@@ -59,10 +91,17 @@ const initialProjectsData = [
     w_category: "Data Analytics",
     w_desc:
       "Interactive financial analytics dashboard performing exploratory data analysis, moving average trendlines, and XGBoost ML regression for market volatility prediction.",
-    w_tech: ["Python", "Pandas", "NumPy", "Scikit-Learn", "Streamlit", "Matplotlib"],
+    w_tech: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-Learn",
+      "Streamlit",
+      "Matplotlib",
+    ],
     w_img: "📈",
-    live_link: "https://github.com/Khursheed5898",
-    github_link: "https://github.com/Khursheed5898",
+    live_link: "https://github.com/dashboard",
+    github_link: "https://github.com/dashboard",
   },
   {
     w_no: 5,
@@ -70,10 +109,17 @@ const initialProjectsData = [
     w_category: "Web Dev (MERN)",
     w_desc:
       "Full-stack AI education platform featuring transparent AI reasoning, structured debate rounds, Gemini API integration, and real-time Socket.io metrics.",
-    w_tech: ["React 19", "Node.js", "Express", "Google Gemini API", "Socket.io", "MongoDB"],
+    w_tech: [
+      "React 19",
+      "Node.js",
+      "Express",
+      "Google Gemini API",
+      "Socket.io",
+      "MongoDB",
+    ],
     w_img: "🗣️",
     live_link: "https://dibotai.duckdns.org/",
-    github_link: "https://github.com/Khursheed5898/dibot-ai",
+    github_link: "https://github.com/dashboard",
   },
   {
     w_no: 6,
@@ -81,10 +127,17 @@ const initialProjectsData = [
     w_category: "Web Dev (MERN)",
     w_desc:
       "Production 3D glassmorphic MERN portfolio with dynamic domain filtering, Express REST APIs, MongoDB contact engine, and integrated AVID AI Recruiter Modal.",
-    w_tech: ["React.js", "Node.js", "Express", "MongoDB Atlas", "Groq API", "Vercel"],
+    w_tech: [
+      "React.js",
+      "Node.js",
+      "Express",
+      "MongoDB Atlas",
+      "Groq API",
+      "Vercel",
+    ],
     w_img: "💻",
-    live_link: "https://khursheed-portfolio.vercel.app",
-    github_link: "https://github.com/Khursheed5898/MyPortfolio",
+    live_link: "https://khursheed4k.vercel.app/",
+    github_link: "https://github.com/dashboard",
   },
   {
     w_no: 7,
@@ -94,8 +147,8 @@ const initialProjectsData = [
       "Full-stack MERN e-commerce platform with Stripe payment gateway integration, JWT authentication, Redux toolkit state, and admin management dashboard.",
     w_tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe API"],
     w_img: "🛒",
-    live_link: "https://github.com/Khursheed5898",
-    github_link: "https://github.com/Khursheed5898",
+    live_link: "https://github.com/dashboard",
+    github_link: "https://github.com/dashboard",
   },
   {
     w_no: 8,
@@ -103,10 +156,16 @@ const initialProjectsData = [
     w_category: "Embedded & Robotics",
     w_desc:
       "Non-contact hardware measurement robot prototype capable of calculating object vertical height using laser sensing and control logic programmed in Java.",
-    w_tech: ["Arduino IDE", "Java", "Mechatronics", "Hardware Laser Sensors", "Robotics"],
+    w_tech: [
+      "Arduino IDE",
+      "Java",
+      "Mechatronics",
+      "Hardware Laser Sensors",
+      "Robotics",
+    ],
     w_img: "🤖",
-    live_link: "https://github.com/Khursheed5898",
-    github_link: "https://github.com/Khursheed5898",
+    live_link: "https://github.com/dashboard",
+    github_link: "https://github.com/dashboard",
   },
   {
     w_no: 9,
@@ -116,8 +175,8 @@ const initialProjectsData = [
       "Computer-vision powered obstacle detection & spatial mapping using ROS2, YOLOv8 object detection, and LiDAR sensor integration.",
     w_tech: ["ROS2", "YOLOv8", "Python", "C++", "OpenCV", "LiDAR"],
     w_img: "🛰️",
-    live_link: "https://github.com/Khursheed5898",
-    github_link: "https://github.com/Khursheed5898",
+    live_link: "https://github.com/dashboard",
+    github_link: "https://github.com/dashboard",
   },
 ];
 
@@ -153,26 +212,40 @@ const MyWork = () => {
       .then((res) => res.json())
       .then((resData) => {
         if (resData.success && resData.data && resData.data.length > 0) {
-          // Map API items while preserving initial projects fallback
-          const formatted = resData.data.map((item, idx) => ({
-            w_no: item._id || idx + 1,
-            w_name: item.title || item.w_name,
-            w_category: normalizeCategory(item.category || item.w_category),
-            w_desc: item.desc || item.w_desc,
-            w_tech: item.tech || item.w_tech || [],
-            w_img: item.badge || item.w_img || "🚀",
-            live_link: (item.live && item.live !== "#") ? item.live : (item.live_link && item.live_link !== "#" ? item.live_link : "https://github.com/Khursheed5898"),
-            github_link: (item.github && item.github !== "#") ? item.github : (item.github_link && item.github_link !== "#" ? item.github_link : "https://github.com/Khursheed5898"),
-          }));
+          const formatted = resData.data.map((item, idx) => {
+            const nameLower = (item.title || item.w_name || "").toLowerCase();
+            let liveUrl = "https://github.com/dashboard";
+            if (nameLower.includes("dibot")) {
+              liveUrl = "https://dibotai.duckdns.org/";
+            } else if (nameLower.includes("portfolio")) {
+              liveUrl = "https://khursheed4k.vercel.app/";
+            } else if (item.live || item.live_link) {
+              const apiLive = item.live || item.live_link;
+              if (apiLive !== "#" && apiLive.trim() !== "") {
+                liveUrl = apiLive;
+              }
+            }
 
-          // Merge DB items with initial static list uniquely by project name
+            return {
+              w_no: item._id || idx + 1,
+              w_name: item.title || item.w_name,
+              w_category: normalizeCategory(item.category || item.w_category),
+              w_desc: item.desc || item.w_desc,
+              w_tech: item.tech || item.w_tech || [],
+              w_img: item.badge || item.w_img || "🚀",
+              live_link: liveUrl,
+              github_link: "https://github.com/dashboard",
+            };
+          });
+
           const mergedNames = new Set(formatted.map((p) => p.w_name));
-          const restStatic = initialProjectsData.filter((p) => !mergedNames.has(p.w_name));
+          const restStatic = initialProjectsData.filter(
+            (p) => !mergedNames.has(p.w_name),
+          );
           setProjectsList([...formatted, ...restStatic]);
         }
       })
       .catch(() => {
-        // Fallback to full local array if server isn't active
         setProjectsList(initialProjectsData);
       });
   }, []);
@@ -211,7 +284,8 @@ const MyWork = () => {
         <span className="mywork-badge">PORTFOLIO SHOWCASE</span>
         <h1>My Featured Projects</h1>
         <p className="mywork-subtitle">
-          Practical applications engineered across Machine Learning, Data Analytics, MERN & Robotics
+          Practical applications engineered across Machine Learning, Data
+          Analytics, MERN & Robotics
         </p>
       </div>
 
@@ -228,23 +302,27 @@ const MyWork = () => {
         ))}
       </div>
 
-      {/* 3D Projects Grid */}
+      {/* Projects Grid */}
       <div className="mywork-container">
         {filteredProjects.map((project) => {
           const categoryClass = getCategoryClass(project.w_category);
 
-          // Guaranteed Fail-Safe URLs
-          const liveUrl =
-            project.live_link && project.live_link !== "#"
-              ? project.live_link
-              : project.github_link && project.github_link !== "#"
-              ? project.github_link
-              : "https://github.com/Khursheed5898";
+          const nameLower = (project.w_name || "").toLowerCase();
+          let liveUrl = "https://github.com/dashboard";
 
-          const githubUrl =
-            project.github_link && project.github_link !== "#"
-              ? project.github_link
-              : "https://github.com/Khursheed5898";
+          if (nameLower.includes("dibot")) {
+            liveUrl = "https://dibotai.duckdns.org/";
+          } else if (nameLower.includes("portfolio")) {
+            liveUrl = "https://khursheed4k.vercel.app/";
+          } else if (
+            project.live_link &&
+            project.live_link.trim() !== "" &&
+            project.live_link !== "#"
+          ) {
+            liveUrl = project.live_link;
+          }
+
+          const githubUrl = "https://github.com/dashboard";
 
           return (
             <div
@@ -264,12 +342,8 @@ const MyWork = () => {
                 <a
                   href={liveUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="work-name-link"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.open(liveUrl, "_blank", "noopener,noreferrer");
-                  }}
                 >
                   <h2 className="work-name">{project.w_name} ↗</h2>
                 </a>
@@ -288,23 +362,17 @@ const MyWork = () => {
                     href={liveUrl}
                     className="work-btn live-btn"
                     target="_blank"
-                    rel="noreferrer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(liveUrl, "_blank", "noopener,noreferrer");
-                    }}
+                    rel="noopener noreferrer"
                   >
-                    {liveUrl.includes("github.com") ? "View Project ↗" : "Live Demo ↗"}
+                    {liveUrl.includes("github.com")
+                      ? "View Project ↗"
+                      : "Live Demo ↗"}
                   </a>
                   <a
                     href={githubUrl}
                     className="work-btn code-btn"
                     target="_blank"
-                    rel="noreferrer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(githubUrl, "_blank", "noopener,noreferrer");
-                    }}
+                    rel="noopener noreferrer"
                   >
                     GitHub Code 💻
                   </a>
@@ -319,4 +387,3 @@ const MyWork = () => {
 };
 
 export default MyWork;
-
