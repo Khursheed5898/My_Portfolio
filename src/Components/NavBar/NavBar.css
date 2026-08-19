@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 8%;
+  padding: 14px 2.5% !important;
   background: rgba(13, 12, 17, 0.7);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -57,11 +57,13 @@
 }
 
 .nav-logo h2 {
-  font-size: 26px;
+  font-family: "Georgia", serif;
+  font-size: 22px;
   font-weight: 800;
   color: var(--text-main);
   letter-spacing: -0.5px;
   cursor: pointer;
+  white-space: nowrap !important;
   transition: var(--transition);
 }
 
@@ -135,22 +137,31 @@
 }
 
 /* Navigation Links */
+.nav-logo {
+  z-index: 2;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 40px;
+  gap: 24px;
   background: rgba(255, 255, 255, 0.03);
-  padding: 10px 30px;
+  padding: 8px 24px;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .anchor-link {
   text-decoration: none;
   color: var(--text-muted);
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 500;
+  white-space: nowrap !important;
   transition: var(--transition);
   position: relative;
   padding: 4px 0;
@@ -178,6 +189,7 @@
 
 /* CTA Connect Button - Metallic Silver & Platinum Chrome */
 .nav-connect {
+  margin-left: auto;
   transition: var(--transition);
 }
 
@@ -190,6 +202,7 @@
   font-size: 13.5px;
   font-weight: 700;
   display: inline-block;
+  white-space: nowrap !important;
   cursor: pointer;
   box-shadow: 0 4px 18px rgba(255, 255, 255, 0.35), 0 0 12px rgba(226, 232, 240, 0.25);
   transition: var(--transition);
@@ -237,28 +250,29 @@
   background: #06b6d4;
 }
 
-/* Mobile & Tablet Responsive Adjustments */
-@media (max-width: 1024px) {
+/* Laptop View (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
   .navbar {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    padding: 14px 4%;
+    padding: 14px 3%;
   }
 
   .nav-logo h2 {
-    font-size: 20px;
-    white-space: nowrap;
+    font-size: 20px !important;
+    white-space: nowrap !important;
   }
 
-  .logo-dot {
-    font-size: 24px;
+  .logo-star-glow svg {
+    width: 15px;
+    height: 15px;
   }
 
   .nav-menu {
-    gap: 12px;
-    padding: 6px 14px;
+    gap: 16px;
+    padding: 8px 18px;
   }
 
   .anchor-link {
@@ -267,8 +281,8 @@
   }
 
   .anchor-link-btn {
-    padding: 7px 14px;
-    font-size: 12px;
+    padding: 8px 16px;
+    font-size: 12.5px;
     white-space: nowrap;
   }
 }
@@ -290,6 +304,8 @@
     position: fixed;
     top: 0;
     right: -100%;
+    left: auto;
+    transform: none;
     flex-direction: column;
     justify-content: center;
     background: rgba(13, 12, 17, 0.92);

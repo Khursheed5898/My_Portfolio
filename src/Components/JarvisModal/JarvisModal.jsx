@@ -4,7 +4,7 @@ import "./JarvisModal.css";
 // Knowledge base for Jarvis AI Assistant (Public Professional Info)
 const knowledgeBase = {
   about:
-    "Khursheed is a CS (AI) Engineer and Multi-Disciplinary Full-Stack Developer specializing in MERN Stack, Machine Learning, Data Analytics, and Embedded Robotics. He builds high-performance 3D web applications and scalable backends.",
+    "Khursheed is a B.Tech CS(Ai) Engineer and Multi-Disciplinary Full-Stack Developer specializing in MERN Stack, Machine Learning, Data Analytics, and Embedded Robotics. He builds high-performance 3D web applications and scalable backends.",
   domains:
     "Khursheed operates across 4 core engineering domains:\n1. 💻 Full-Stack Web Dev (MERN, React, Node, 3D Glass UI)\n2. 🤖 Machine Learning & AI (PyTorch, TensorFlow, OpenCV)\n3. 📊 Data Analytics & BI (SQL, Pandas, PowerBI)\n4. 🔌 Embedded Systems & Robotics (C/C++, ESP32, Arduino, IoT)",
   vision:

@@ -4,7 +4,7 @@ import { API_BASE_URL } from "../../config/api";
 import "./About.css";
 
 const About = () => {
-  const [projectCount, setProjectCount] = useState(15);
+  const [projectCount, setProjectCount] = useState(9);
 
   useEffect(() => {
     const fetchProjectCount = async () => {
@@ -13,11 +13,11 @@ const About = () => {
         if (response.ok) {
           const data = await response.json();
           if (data.projects && data.projects.length > 0) {
-            setProjectCount(Math.max(15, data.projects.length));
+            setProjectCount(data.projects.length);
           }
         }
       } catch (err) {
-        // Fallback to default
+        // Fallback to initial exact projects array count (9)
       }
     };
     fetchProjectCount();
@@ -36,7 +36,7 @@ const About = () => {
         {/* Bio Card */}
         <div className="about-bio-card">
           <p className="bio-lead">
-            I am a CS (AI) Engineer & Multi-Disciplinary Developer actively operating across <strong style={{ color: "#fff" }}>Machine Learning, Data Analytics, Robotics, and Web Dev</strong>.
+            I am a B.Tech CS(Ai) Engineer & Multi-Disciplinary Developer actively operating across <strong style={{ color: "#fff" }}>Machine Learning, Data Analytics, Robotics, and Web Dev</strong>.
           </p>
           <p className="bio-text">
             My engineering journey bridges high-level full-stack MERN software architectures with intelligent AI models, complex data analytics pipelines, and low-level embedded hardware systems. I focus on writing clean, modular code, optimizing algorithmic efficiency, and engineering scalable real-world systems.

@@ -33,6 +33,7 @@
 }
 
 .footer-brand h2 {
+  font-family: "Georgia", serif;
   font-size: 32px;
   font-weight: 800;
   color: var(--text-main);
@@ -116,11 +117,12 @@
 }
 
 .footer-copyright {
-  font-family: var(--font-body);
+  font-family: "Times New Roman", Times, serif;
   line-height: 1.5;
 }
 
 .copyright-sub {
+  font-family: "Times New Roman", Times, serif;
   display: block;
   margin-top: 3px;
   color: var(--text-muted);

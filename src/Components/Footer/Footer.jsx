@@ -47,9 +47,9 @@ const Footer = () => {
             Khursheed Alam<span className="logo-dot">.</span>
           </h2>
           <p>
-            CS (AI) Engineer & Multi-Disciplinary Developer operating across
-            Machine Learning, Data Analytics, Robotics, and Full-Stack Web
-            Development.
+            B.Tech CS(Ai) Engineer & Multi-Disciplinary Developer operating
+            across Machine Learning, Data Analytics, Robotics, and Full-Stack
+            Web Development.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ const Footer = () => {
       {/* Bottom Row: Copyright */}
       <div className="footer-bottom">
         <p className="footer-copyright">
-          © {new Date().getFullYear()} Khursheed Alam. All rights reserved.
+          © {new Date().getFullYear()} Khursheed Alam All rights reserved.
           <span className="copyright-sub">Built with React & 3D Glass UI.</span>
         </p>
 

@@ -54,7 +54,7 @@ const Hero = () => {
           {/* Subtitle */}
           <p className="hero-subtitle">
             Hi, I'm <strong style={{ color: "#fff " }}> Khursheed Alam</strong>{" "}
-            — CS (AI) Engineer & Multi-Disciplinary Developer. Building Machine
+            — B.Tech CS(Ai) Engineer & Multi-Disciplinary Developer. Building Machine
             Learning Models, Data Analytics Pipelines, Embedded Robotics
             Systems, and production MERN Web Applications.
           </p>

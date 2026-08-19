@@ -29,8 +29,8 @@ const visionPillars = [
     timeline: "Target Vision 2030",
     pillarClass: "pillar-engineering",
     tagline: "AI Systems, Robotics & Quantum Computing Era",
-    desc: "Expanding CS (AI) engineering into physical robotics, autonomous hardware systems, and future Quantum AI architectures over the next decade.",
-    tags: ["CS (AI)", "Robotics", "Quantum AI", "Autonomous Tech"]
+    desc: "Expanding B.Tech CS(Ai) engineering into physical robotics, autonomous hardware systems, and future Quantum AI architectures over the next decade.",
+    tags: ["B.Tech CS(Ai)", "Robotics", "Quantum AI", "Autonomous Tech"]
   },
   {
     id: 4,
