@@ -161,8 +161,8 @@ const MyWork = () => {
             w_desc: item.desc || item.w_desc,
             w_tech: item.tech || item.w_tech || [],
             w_img: item.badge || item.w_img || "🚀",
-            live_link: item.live || item.live_link || "#",
-            github_link: item.github || item.github_link || "#",
+            live_link: (item.live && item.live !== "#") ? item.live : (item.live_link && item.live_link !== "#" ? item.live_link : "https://github.com/Khursheed5898"),
+            github_link: (item.github && item.github !== "#") ? item.github : (item.github_link && item.github_link !== "#" ? item.github_link : "https://github.com/Khursheed5898"),
           }));
 
           // Merge DB items with initial static list uniquely by project name
@@ -232,6 +232,20 @@ const MyWork = () => {
       <div className="mywork-container">
         {filteredProjects.map((project) => {
           const categoryClass = getCategoryClass(project.w_category);
+
+          // Guaranteed Fail-Safe URLs
+          const liveUrl =
+            project.live_link && project.live_link !== "#"
+              ? project.live_link
+              : project.github_link && project.github_link !== "#"
+              ? project.github_link
+              : "https://github.com/Khursheed5898";
+
+          const githubUrl =
+            project.github_link && project.github_link !== "#"
+              ? project.github_link
+              : "https://github.com/Khursheed5898";
+
           return (
             <div
               key={project.w_no}
@@ -248,10 +262,14 @@ const MyWork = () => {
                 </div>
 
                 <a
-                  href={project.live_link && project.live_link !== "#" ? project.live_link : project.github_link}
+                  href={liveUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="work-name-link"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(liveUrl, "_blank", "noopener,noreferrer");
+                  }}
                 >
                   <h2 className="work-name">{project.w_name} ↗</h2>
                 </a>
@@ -267,18 +285,26 @@ const MyWork = () => {
 
                 <div className="work-links">
                   <a
-                    href={project.live_link && project.live_link !== "#" ? project.live_link : project.github_link}
+                    href={liveUrl}
                     className="work-btn live-btn"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(liveUrl, "_blank", "noopener,noreferrer");
+                    }}
                   >
-                    {project.live_link && project.live_link.includes("github.com") ? "View Project ↗" : "Live Demo ↗"}
+                    {liveUrl.includes("github.com") ? "View Project ↗" : "Live Demo ↗"}
                   </a>
                   <a
-                    href={project.github_link && project.github_link !== "#" ? project.github_link : "https://github.com/khursheed5898"}
+                    href={githubUrl}
                     className="work-btn code-btn"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(githubUrl, "_blank", "noopener,noreferrer");
+                    }}
                   >
                     GitHub Code 💻
                   </a>
