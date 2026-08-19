@@ -201,10 +201,22 @@
   color: var(--text-accent);
 }
 
+.work-name-link {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+  display: inline-block;
+}
+
 .work-name {
   font-size: 22px;
   font-weight: 700;
   color: var(--text-main);
+  transition: var(--transition);
+}
+
+.work-name-link:hover .work-name {
+  color: #38bdf8;
 }
 
 .work-desc {

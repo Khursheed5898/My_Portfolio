@@ -28,7 +28,7 @@ const initialProjectsData = [
       "Exploratory Data Analysis (EDA) & classification ML pipeline predicting customer retention risk using Scikit-Learn models, feature scaling, and correlation heatmaps.",
     w_tech: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Seaborn", "Matplotlib"],
     w_img: "📊",
-    live_link: "#",
+    live_link: "https://github.com/khursheed5898/customer-churn-ml",
     github_link: "https://github.com/khursheed5898/customer-churn-ml",
   },
   {
@@ -39,7 +39,7 @@ const initialProjectsData = [
       "Supervised ML regression algorithm predicting property market prices based on square footage, location features, and historical dataset analytics.",
     w_tech: ["Python", "Scikit-Learn", "Pandas", "Linear Regression", "Matplotlib"],
     w_img: "🏡",
-    live_link: "#",
+    live_link: "https://github.com/khursheed5898/house-price-estimator",
     github_link: "https://github.com/khursheed5898/house-price-estimator",
   },
   {
@@ -50,7 +50,7 @@ const initialProjectsData = [
       "Core Data Analytics pipeline featuring SQL data wrangling, RFM cohort analysis, and unsupervised K-Means ML clustering to identify high-value vs churn-risk customers.",
     w_tech: ["Python", "SQL", "Pandas", "Seaborn", "Scikit-Learn (K-Means)", "Plotly"],
     w_img: "📊",
-    live_link: "#",
+    live_link: "https://github.com/khursheed5898/customer-segmentation-analytics",
     github_link: "https://github.com/khursheed5898/customer-segmentation-analytics",
   },
   {
@@ -61,7 +61,7 @@ const initialProjectsData = [
       "Interactive financial analytics dashboard performing exploratory data analysis, moving average trendlines, and XGBoost ML regression for market volatility prediction.",
     w_tech: ["Python", "Pandas", "NumPy", "Scikit-Learn", "Streamlit", "Matplotlib"],
     w_img: "📈",
-    live_link: "#",
+    live_link: "https://github.com/khursheed5898/financial-trend-analytics",
     github_link: "https://github.com/khursheed5898/financial-trend-analytics",
   },
   {
@@ -94,7 +94,7 @@ const initialProjectsData = [
       "Full-stack MERN e-commerce platform with Stripe payment gateway integration, JWT authentication, Redux toolkit state, and admin management dashboard.",
     w_tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe API"],
     w_img: "🛒",
-    live_link: "#",
+    live_link: "https://github.com/khursheed5898/cyberstore-mern",
     github_link: "https://github.com/khursheed5898/cyberstore-mern",
   },
   {
@@ -105,7 +105,7 @@ const initialProjectsData = [
       "Non-contact hardware measurement robot prototype capable of calculating object vertical height using laser sensing and control logic programmed in Java.",
     w_tech: ["Arduino IDE", "Java", "Mechatronics", "Hardware Laser Sensors", "Robotics"],
     w_img: "🤖",
-    live_link: "#",
+    live_link: "https://github.com/khursheed5898/laser-height-robot",
     github_link: "https://github.com/khursheed5898/laser-height-robot",
   },
   {
@@ -116,7 +116,7 @@ const initialProjectsData = [
       "Computer-vision powered obstacle detection & spatial mapping using ROS2, YOLOv8 object detection, and LiDAR sensor integration.",
     w_tech: ["ROS2", "YOLOv8", "Python", "C++", "OpenCV", "LiDAR"],
     w_img: "🛰️",
-    live_link: "#",
+    live_link: "https://github.com/khursheed5898/autonomous-mapping-rover",
     github_link: "https://github.com/khursheed5898/autonomous-mapping-rover",
   },
 ];
@@ -247,7 +247,14 @@ const MyWork = () => {
                   <span className="work-category">{project.w_category}</span>
                 </div>
 
-                <h2 className="work-name">{project.w_name}</h2>
+                <a
+                  href={project.live_link && project.live_link !== "#" ? project.live_link : project.github_link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="work-name-link"
+                >
+                  <h2 className="work-name">{project.w_name} ↗</h2>
+                </a>
                 <p className="work-desc">{project.w_desc}</p>
 
                 <div className="work-tech-stack">
@@ -260,15 +267,15 @@ const MyWork = () => {
 
                 <div className="work-links">
                   <a
-                    href={project.live_link}
+                    href={project.live_link && project.live_link !== "#" ? project.live_link : project.github_link}
                     className="work-btn live-btn"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Live Demo ↗
+                    {project.live_link && project.live_link.includes("github.com") ? "View Project ↗" : "Live Demo ↗"}
                   </a>
                   <a
-                    href={project.github_link}
+                    href={project.github_link && project.github_link !== "#" ? project.github_link : "https://github.com/khursheed5898"}
                     className="work-btn code-btn"
                     target="_blank"
                     rel="noreferrer"
